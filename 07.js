@@ -32,11 +32,3 @@ function dropNumber(element) {
     element.style.display = 'none';
   }, 1000); // Match animation duration
 }
-document.addEventListener("DOMContentLoaded", () => {
-  const splashScreen = document.getElementById("splash-screen");
-  const mainContent = document.getElementById("main-content");
-  setTimeout( () => {
-    splashScreen.style.display = "none";
-    mainContent.style.display = "block";
-  }, 5000);
-});

@@ -715,11 +715,3 @@ document.querySelectorAll('.circle').forEach((circle, index) => {
     circle.style.backgroundColor = getRandomColor();
   });
 }); 
-document.addEventListener("DOMContentLoaded", () => {
-  const splashScreen = document.getElementById("splash-screen");
-  const mainContent = document.getElementById("main-content");
-  setTimeout( () => {
-    splashScreen.style.display = "none";
-    mainContent.style.display = "block";
-  }, 5000);
-});

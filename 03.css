@@ -7,7 +7,7 @@ body{
   min-height: 100vh;
 }
 #image1 {
-  width: 80%;
+  width: 90%;
   max-width: 100%;
   height: auto;
   align-items: center;
@@ -18,8 +18,8 @@ body{
   width: 300px;
   -webkit-appearance: none; 
   appearance: none;
-  background: #ddd;  /* Default background color of the track */
-  height: 8px;  /* Height of the track */
+  background: #ddd; 
+  height: 8px; 
   border-radius: 5px;  
 }
 #splash-screen {
@@ -53,9 +53,8 @@ body{
     visibility: hidden; 
   }
 }
-/* Style the slider thumb */
 #pixelSize::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Removes default styling */
+  -webkit-appearance: none;
   appearance: none;
   width: 10px;
   height: 10px;
@@ -65,11 +64,19 @@ body{
   align-items: center;
   justify-content: center;
 }
+#pixelSize::-webkit-slider-runnable-track {
+  background: #adadad; 
+  height: 10px; 
+  border-radius: 5px; 
+  align-items: center;
+  justify-content: center;
+
+}
 /* Style the thumb for Firefox */
 #pixelSize::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: gray; 
+  background: #adadad; 
   border-radius: 50%;  
   cursor: pointer;
   align-items: center;

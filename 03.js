@@ -45,13 +45,3 @@ pixelSizeSlider.addEventListener("input", () => {
    createPixelImage()
    pixel = parseInt(pixelSizeSlider.value);
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-   const splashScreen = document.getElementById("splash-screen");
-   const mainContent = document.getElementById("main-content");
-    // Show the splash screen for 5 seconds
-   setTimeout(() => {
-     splashScreen.style.display = "none"; // Hide the splash screen
-     mainContent.style.display = "block"; // Show the main content
-   }, 5000);
- });

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Son of Man</title>
+        <link rel="stylesheet" href="04.css">
+    </head>
+    <body>
+        <div id="splash-screen">
+            <img src="04direction.png" alt="Splash Screen Image">
+        </div>
+        <a href="index.html"><img class="home" src="homeWhite.png"></a>
+        <div class="repeating-container"></div>
+        <script src="p5.js"></script>
+        <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+        <script src="04.js"></script>
+        <script>
+            const container = document.querySelector(".repeating-container");
+            const images = ["Man1.png", "Man2.png", "Man3.png", "Man4.png", "Man5.png", "Man6.png", "Man7.png", "Man8.png"];
+            const cols = Math.ceil(window.innerWidth / (window.innerHeight * 0.3333));
+            const rows = Math.ceil(window.innerHeight / (window.innerHeight * 0.3333));
+            const totalImages = 4 * 4;
+
+            for (let i = 0; i < totalImages; i++) {
+                const img = document.createElement("img");
+                img.src = images[i % images.length]; // Cycle through the 8 images
+                img.classList.add("men");
+                container.appendChild(img);
+            }
+        </script>
+    </body>
+</html>

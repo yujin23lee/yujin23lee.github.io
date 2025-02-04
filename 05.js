@@ -494,12 +494,3 @@ document.addEventListener('mousemove', (event) => {
   pupil35.style.transform = `translate(${constrainedX35}px, ${constrainedY35}px)`;
   pupil36.style.transform = `translate(${constrainedX36}px, ${constrainedY36}px)`;
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const splashScreen = document.getElementById("splash-screen");
-  const mainContent = document.getElementById("main-content");
-  setTimeout( () => {
-    splashScreen.style.display = "none";
-    mainContent.style.display = "block";
-  }, 5000);
-});
