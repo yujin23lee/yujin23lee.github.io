@@ -1,0 +1,53 @@
+@media (hover: hover) and (pointer: fine) {
+  .constellation .float-project .has-image img {
+    filter: grayscale(1);
+    transition: filter 450ms ease;
+  }
+
+  .constellation .float-project:hover .has-image img,
+  .constellation .float-project:focus-within .has-image img {
+    filter: grayscale(0);
+  }
+}
+
+.constellation .float-project .image-placeholder {
+  aspect-ratio: 1 / 1 !important;
+}
+
+.constellation .float-project p {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  .constellation {
+    --thumb-size: clamp(85px, 7.5vw, 120px);
+    --ring-radius: clamp(170px, 18vw, 230px);
+    inset: 7rem 4vw;
+  }
+
+  .constellation .float-project {
+    width: var(--thumb-size);
+    left: calc(50% + (cos(var(--angle)) * var(--ring-radius)) - (var(--thumb-size) / 2));
+    top: calc(50% + (sin(var(--angle)) * var(--ring-radius)) - (var(--thumb-size) / 2));
+  }
+
+  .constellation .fp-1 { --angle: -90deg; }
+  .constellation .fp-2 { --angle: -45deg; }
+  .constellation .fp-3 { --angle: 0deg; }
+  .constellation .fp-4 { --angle: 45deg; }
+  .constellation .fp-5 { --angle: 90deg; }
+  .constellation .fp-6 { --angle: 135deg; }
+  .constellation .fp-7 { --angle: 180deg; }
+  .constellation .fp-8 { --angle: 225deg; }
+}
+
+@media (max-width: 760px) {
+  .constellation .float-project {
+    width: 82% !important;
+    justify-self: center;
+  }
+
+  .constellation .float-project:nth-child(1) {
+    grid-column: auto;
+  }
+}
