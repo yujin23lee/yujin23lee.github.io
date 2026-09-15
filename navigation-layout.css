@@ -148,8 +148,7 @@ body[data-view="about"] .about {
   aspect-ratio: 4 / 5;
   margin: 0 0 1.5rem;
   object-fit: cover;
-  object-position: center 22%;
-  filter: grayscale(1);
+  object-position: 41% center;
 }
 
 .about-resume {
