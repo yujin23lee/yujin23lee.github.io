@@ -7,6 +7,7 @@ body[data-view="about"],
 body[data-view="contact"] {
   min-height: 100svh;
   overflow: auto;
+  overflow-x: hidden;
 }
 
 body[data-view="home"] .project-index,
@@ -135,11 +136,15 @@ body[data-view="about"] .about {
 
 .about-intro__profile {
   align-self: end;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .about-intro__profile img {
   display: block;
-  width: min(100%, 360px);
+  width: min(100%, 280px);
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   margin: 0 0 1.5rem;
   object-fit: cover;
@@ -296,7 +301,8 @@ footer {
   }
 
   .about-intro__profile img {
-    width: min(78vw, 360px);
+    width: min(64vw, 240px);
+    max-width: 100%;
   }
 
   .about-intro__profile p {
