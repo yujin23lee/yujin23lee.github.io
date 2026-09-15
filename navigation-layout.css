@@ -142,13 +142,11 @@ body[data-view="about"] .about {
 
 .about-intro__profile img {
   display: block;
-  width: min(100%, 280px);
+  width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
   margin: 0 0 1.5rem;
-  object-fit: cover;
-  object-position: 41% center;
+  object-fit: contain;
 }
 
 .about-resume {
@@ -300,7 +298,7 @@ footer {
   }
 
   .about-intro__profile img {
-    width: min(64vw, 240px);
+    width: 100%;
     max-width: 100%;
   }
 
