@@ -127,11 +127,24 @@ body[data-view="about"] .about {
 }
 
 .about-intro p {
-  align-self: end;
   max-width: 440px;
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.55;
+}
+
+.about-intro__profile {
+  align-self: end;
+}
+
+.about-intro__profile img {
+  display: block;
+  width: min(100%, 360px);
+  aspect-ratio: 4 / 5;
+  margin: 0 0 1.5rem;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: grayscale(1);
 }
 
 .about-resume {
@@ -276,6 +289,18 @@ footer {
 
   .about-intro p {
     margin-top: 2.5rem;
+  }
+
+  .about-intro__profile {
+    margin-top: 2.5rem;
+  }
+
+  .about-intro__profile img {
+    width: min(78vw, 360px);
+  }
+
+  .about-intro__profile p {
+    margin-top: 0;
   }
 
   .about-education,
