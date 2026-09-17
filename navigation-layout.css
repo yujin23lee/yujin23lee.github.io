@@ -454,13 +454,64 @@ footer {
 
 .project-gallery__item figcaption {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 1rem;
   padding-top: .75rem;
   border-top: 1px solid var(--ink);
   font-size: .62rem;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+.project-gallery__item figcaption > span {
+  flex: 0 0 auto;
+}
+
+.project-gallery__item figcaption > div {
+  flex: 1;
+  text-align: right;
+}
+
+.project-gallery__item figcaption strong {
+  display: block;
+  font-weight: 500;
+}
+
+.project-gallery__item figcaption p,
+.project-image-note p {
+  margin: .55rem 0 0;
+  font-size: .82rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.project-image-note {
+  width: min(72vw, 980px);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  margin: .75rem 0 0 auto;
+  padding-top: .75rem;
+  border-top: 1px solid var(--ink);
+}
+
+.project-image-note > span,
+.project-image-note strong {
+  font-size: .62rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-image-note > div {
+  max-width: 680px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.project-image-note strong {
+  display: block;
+  font-weight: 500;
 }
 
 .project-final-image {
@@ -572,6 +623,15 @@ footer {
 }
 
 @media (max-width: 760px) {
+  .project-image-note {
+    width: 100%;
+  }
+
+  .project-gallery__item figcaption > div,
+  .project-image-note > div {
+    text-align: left;
+  }
+
   .ai-workflow {
     padding-bottom: 5rem;
   }
