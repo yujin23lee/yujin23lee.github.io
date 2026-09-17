@@ -140,10 +140,25 @@ function activateConstellation(){
   space.addEventListener('pointerleave',()=>cards.forEach(card=>card.style.transform=''));
 }
 
+function activateArchive(){
+  const lightbox=document.querySelector('#archive-lightbox');
+  if(!lightbox) return;
+  const preview=lightbox.querySelector('img');
+  document.querySelectorAll('.archive-item').forEach(item=>item.addEventListener('click',()=>{
+    const image=item.querySelector('img');
+    preview.src=item.dataset.full;
+    preview.alt=image.alt;
+    lightbox.showModal();
+  }));
+  lightbox.querySelector('.archive-lightbox__close').addEventListener('click',()=>lightbox.close());
+  lightbox.addEventListener('click',event=>{if(event.target===lightbox) lightbox.close()});
+}
+
 function renderHome(anchor){
-  const view=anchor==='about'||anchor==='contact'?anchor:'home';
+  const view=['archive','about','contact'].includes(anchor)?anchor:'home';
   app.innerHTML=homeHTML; footer.hidden=true; document.body.dataset.view=view; document.querySelector('#year').textContent=new Date().getFullYear(); document.title='Yujin Lee — Industrial Design';
   if(view==='home') activateConstellation();
+  if(view==='archive') activateArchive();
   window.scrollTo(0,0);
 }
 

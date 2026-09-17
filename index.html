@@ -11,14 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="thumbnail-effects.css" />
-    <link rel="stylesheet" href="navigation-layout.css?v=5" />
-    <script src="script.js?v=3" defer></script>
+    <link rel="stylesheet" href="navigation-layout.css?v=6" />
+    <script src="script.js?v=4" defer></script>
   </head>
   <body>
     <header class="site-header">
       <a class="wordmark" href="#work" aria-label="Yujin Lee, home">Yujin Lee</a>
       <nav aria-label="Primary navigation">
         <a href="#work">Work</a>
+        <a href="#archive">Archive</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -50,6 +51,36 @@
         <a href="#project/nest"><span>06</span><strong>Nest</strong><em>Sculpture · Composition</em><i>↗</i></a>
         <a href="#project/sky-mirror"><span>07</span><strong>Sky Mirror</strong><em>Spatial · Installation</em><i>↗</i></a>
         <a href="#project/lightbulb-cube"><span>08</span><strong>Lightbulb Cube</strong><em>Lighting · Material</em><i>↗</i></a>
+      </section>
+
+      <section class="archive-view" id="archive" aria-labelledby="archive-title">
+        <header class="archive-view__header">
+          <p class="eyebrow">Fine art</p>
+          <h2 id="archive-title">Archive</h2>
+        </header>
+        <div class="archive-grid">
+          <button class="archive-item archive-item--portrait" type="button" data-full="images/archive/teacup-landscape.jpg" aria-label="View painting of teacups in a landscape">
+            <img src="images/archive/teacup-landscape.jpg" alt="Painting of floral teacups gathered in a green landscape" loading="lazy">
+          </button>
+          <button class="archive-item archive-item--square" type="button" data-full="images/archive/fruit-palette.jpg" aria-label="View fruit palette object study">
+            <img src="images/archive/fruit-palette.jpg" alt="Sculptural makeup palette containing four fruit studies" loading="lazy">
+          </button>
+          <button class="archive-item archive-item--landscape" type="button" data-full="images/archive/cloud-teapot-dark.jpg" aria-label="View illuminated cloud teapot sculpture">
+            <img src="images/archive/cloud-teapot-dark.jpg" alt="Illuminated cloud-like teapot sculpture against black" loading="lazy">
+          </button>
+          <button class="archive-item archive-item--landscape" type="button" data-full="images/archive/cloud-teapot-light.jpg" aria-label="View illuminated fabric teapot sculpture">
+            <img src="images/archive/cloud-teapot-light.jpg" alt="Illuminated white fabric teapot sculpture" loading="lazy">
+          </button>
+          <button class="archive-item archive-item--portrait" type="button" data-full="images/archive/memory-drawings.jpg" aria-label="View watercolor memory drawing series">
+            <img src="images/archive/memory-drawings.jpg" alt="Grid of twenty-five small watercolor memory drawings" loading="lazy">
+          </button>
+          <button class="archive-item archive-item--landscape" type="button" data-full="images/archive/garden-teacup.jpg" aria-label="View monumental teacup painting">
+            <img src="images/archive/garden-teacup.jpg" alt="Painting of a monumental porcelain teacup in a garden" loading="lazy">
+          </button>
+          <button class="archive-item archive-item--square" type="button" data-full="images/archive/color-inventory.jpg" aria-label="View colored-pencil object inventory">
+            <img src="images/archive/color-inventory.jpg" alt="Colored-pencil inventory of everyday objects arranged by hue" loading="lazy">
+          </button>
+        </div>
       </section>
 
       <section class="about" id="about">
@@ -147,6 +178,11 @@
       <div><a href="mailto:yujinleegmail@gmail.com">Email</a><a href="https://linkedin.com/in/lee-yujin">LinkedIn</a></div>
       <span>© <span id="year"></span> Yujin Lee</span>
     </footer>
+
+    <dialog class="archive-lightbox" id="archive-lightbox" aria-label="Artwork viewer">
+      <button class="archive-lightbox__close" type="button" aria-label="Close artwork viewer">Close</button>
+      <img src="" alt="">
+    </dialog>
 
     <template id="project-template">
       <article class="project-page">
